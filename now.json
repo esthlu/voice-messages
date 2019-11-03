@@ -1,0 +1,10 @@
+{
+  "name": "voice-messages",
+  "version": 2,
+  "builds": [
+    {
+      "src": "./src/test.js",
+      "use": "@now/node"
+    }
+  ]
+}

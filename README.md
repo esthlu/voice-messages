@@ -27,3 +27,10 @@ You can deploy your new React project with a single command from your terminal u
 ```shell
 $ now
 ```
+---
+##### Resources
+- Startup:
+  - https://zeit.co/docs/
+  - https://zeit.co/docs/now-cli/#commands/init
+- Slack app:
+  - https://zeit.co/blog/serverless-slack-apps-with-now
