@@ -7,18 +7,51 @@
   height: 100vh;
 }
 
-button.record {
+button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: fit-content;
+  height: fit-content;
   padding: 0;
+  background: none;
+  border: none;
+  color: white;
+}
+
+button i {
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+button.record { margin-bottom: 2rem; }
+button.record i { font-size: 3rem; }
+button.record.start i { background-color: #006600; }
+button.record.stop i { background-color: #B20000; }
+
+.hidden { opacity: 0; }
+
+audio {
   margin-bottom: 2rem;
 }
 
-button.record.start { background-color: gray; }
-button.record.stop { background-color: #B20000; }
+.audio-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.hidden { opacity: 0; }
+button.cancel { margin-right: 1rem; }
+
+button.cancel i {
+  color: #B20000;
+  font-size: 3rem;
+  padding: 0;
+}
+
+button.send { margin-left: 1rem; }
+
+button.send i {
+  background-color: #006600;
+  font-size: 2rem;
+}

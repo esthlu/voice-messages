@@ -8,40 +8,57 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       isRecording: false,
-      recording: null,
+      recordedAudio: null,
     };
   }
 
   render() {
     let {
       isRecording,
-      recording,
+      recordedAudio,
     } = this.state;
 
-    console.log("recording", recording)
+    console.log("recordedAudio", recordedAudio)
 
     return (
       <div id="App">
-        <button className={`record ${isRecording ? "stop" : "start"}`} onClick={this.handleClickRecord}>
-          {isRecording ? (
-            <i className="material-icons">stop</i>
-          ) : (
-            <i className="material-icons">mic</i>
-          )}
-        </button>
+        {!recordedAudio && (
+          <button className={`record ${isRecording ? "stop" : "start"}`} onClick={this.handleClickRecord}>
+            {isRecording ? (
+              <i className="material-icons">stop</i>
+            ) : (
+              <i className="material-icons">mic</i>
+            )}
+          </button>
+        )}
 
-        <ReactMic
-          record={isRecording}
-          className={isRecording ? "" : "hidden"}
-          onStop={this.handleStop}
-          // onData={function}
-          strokeColor={'#197278'}
-          backgroundColor={'#FFFFFF'}
-          mimeType="audio/mp3"
-        />
+        {!recordedAudio && (
+          <ReactMic
+            record={isRecording}
+            className={isRecording ? "" : "hidden"}
+            onStop={this.handleStop}
+            // onData={function}
+            strokeColor={'#197278'}
+            backgroundColor={'#FFFFFF'}
+            mimeType="audio/mp3"
+          />
+        )}
 
-        {recording && (
-          <audio src={recording.blobURL} type="audio/mpeg" />
+        {recordedAudio && (
+          <audio controls>
+            <source src={recordedAudio.blobURL} type="audio/mpeg" />
+          </audio>
+        )}
+
+        {recordedAudio && (
+          <div className="audio-options">
+            <button className="cancel" onClick={this.handleCancel}>
+              <i className="material-icons">cancel</i>
+            </button>
+            <button className="send">
+              <i className="material-icons">send</i>
+            </button>
+          </div>
         )}
 
       </div>
@@ -52,8 +69,16 @@ export default class App extends React.Component {
     this.setState({ isRecording: !this.state.isRecording });
   }
 
-  handleStop = (recordedBlob) => {
-    console.log('recordedBlob is: ', recordedBlob);
-    this.setState({ recording: recordedBlob })
+  handleStop = (blob) => {
+    console.log('blob is: ', blob);
+    this.setState({ recordedAudio: blob })
+  }
+
+  handleSendToSlack = () => {
+
+  }
+
+  handleCancel = () => {
+    this.setState({ recordedAudio: null })
   }
 }
