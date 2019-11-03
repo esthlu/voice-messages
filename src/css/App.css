@@ -1,0 +1,24 @@
+#App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+button.record {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+button.record.start { background-color: gray; }
+button.record.stop { background-color: #B20000; }
+
+.hidden { opacity: 0; }
