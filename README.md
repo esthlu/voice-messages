@@ -27,6 +27,12 @@ You can deploy your new React project with a single command from your terminal u
 ```shell
 $ now
 ```
+
+### Deploying to Localhost From Your Terminal
+
+```shell
+$ now dev
+```
 ---
 ##### Resources
 - Startup:
@@ -34,3 +40,6 @@ $ now
   - https://zeit.co/docs/now-cli/#commands/init
 - Slack app:
   - https://zeit.co/blog/serverless-slack-apps-with-now
+- NPM Packages
+  - react-mic: https://github.com/cleandersonlobo/react-mic
+  - node-slack-sdk: https://github.com/slackapi/node-slack-sdk

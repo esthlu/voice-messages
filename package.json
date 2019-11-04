@@ -5,6 +5,8 @@
   "dependencies": {
     "micro": "^9.3.4",
     "querystring": "^0.2.0",
+    "@cleandersonlobo/react-mic": "^1.1.1",
+    "@slack/web-api": "^5.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
