@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactMic } from '@cleandersonlobo/react-mic';
 import { WebClient } from '@slack/web-api';
 
-import './css/App.css';
+import 'css/App.css';
 
 export default class App extends React.Component {
   constructor(props) {

@@ -1,12 +1,12 @@
 {
-  "name": "create-react-app",
+  "name": "voice-messages",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "micro": "^9.3.4",
-    "querystring": "^0.2.0",
     "@cleandersonlobo/react-mic": "^1.1.1",
     "@slack/web-api": "^5.4.0",
+    "micro": "^9.3.4",
+    "querystring": "^0.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
@@ -33,5 +33,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3"
   }
 }
