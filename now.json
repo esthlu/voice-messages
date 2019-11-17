@@ -2,7 +2,8 @@
   "name": "voice-messages",
   "version": 2,
   "builds": [
-    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" } }
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" } },
+    { "src": "src/http.js", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/static/(.*)", "headers": { "cache-control": "s-maxage=31536000,immutable" }, "dest": "/static/$1" },

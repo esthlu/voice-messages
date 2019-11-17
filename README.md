@@ -40,6 +40,9 @@ $ now dev
   - https://zeit.co/docs/now-cli/#commands/init
 - Slack app:
   - https://zeit.co/blog/serverless-slack-apps-with-now
-- NPM Packages
+- Now configuration:
+  - https://docs-git-plug-n-play-master.zeit.now.sh/examples/create-react-app/
+---
+#####NPM Packages
   - react-mic: https://github.com/cleandersonlobo/react-mic
   - node-slack-sdk: https://github.com/slackapi/node-slack-sdk

@@ -1,8 +1,8 @@
 import React from 'react';
 import { ReactMic } from '@cleandersonlobo/react-mic';
 import { WebClient } from '@slack/web-api';
-
-import 'css/App.css';
+import http from 'http.js';
+import 'App.css';
 
 export default class App extends React.Component {
   constructor(props) {
